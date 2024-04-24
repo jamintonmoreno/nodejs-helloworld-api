@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                // Ejecuta el comando npm install para instalar las dependencias
+                // Ejecuta el comando npm install para instalar las dependencias de npm
                 script {
                     // Usa un shell compatible con versiones antiguas de Node.js
                     sh 'npm install'
