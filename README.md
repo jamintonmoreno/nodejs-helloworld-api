@@ -76,5 +76,7 @@ curl http://localhost:3000
 
 ## Diagrama de Alto Nivel de la preparación del CI/CD
 ---
-![Diagrama_AltoNivel(1)](https://github.com/jamintonmoreno/nodejs-helloworld-api/assets/74082502/ad69046b-37fd-4d0e-a87e-073908ac3309)
+
+![Diagrama_AltoNivel(2)](https://github.com/jamintonmoreno/nodejs-helloworld-api/assets/74082502/1fa3f635-0d1f-4cd4-bc30-df8c68c338f1)
+
 
