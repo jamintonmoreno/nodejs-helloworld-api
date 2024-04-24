@@ -53,26 +53,26 @@ curl http://localhost:3000
    - (https://postimg.cc/BX7MMBpW)
      
 4. *Configuración del webhook en el repositorio de GitHub:*
-   - Ingrese al repositorio. Luego ingrese a *Settings > Webhooks > Cre* En la configuración de tu repositorio en GitHub, agrega una nueva URL de webhook apuntando al enlace de ngrok para los eventos "push" y "pull request".
-   - Configurar webhook en GitHub (https://postimg.cc/WdNs30F4) 
-   - Seleccionar eventos en GitHub (https://postimg.cc/V5d8sN3P) 
+   - Ingrese al repositorio. Luego ingrese a *Settings > Webhooks > Add webhook*.
+   - En la opciòn *Payload URL* pegue el link que le entrega ngrok. Importante que ese link lo finalice agregando */github-webhook/*.
+   - (https://postimg.cc/XrGMjhhY) 
+   - Seleccione la opciòn *Let me select individual events* y asegurese de dejar seleccionada las opciones *Pull requests* y *Pushes*.
+   - Posterior cree el Webhook. 
 
-5. *Configuración de Jenkins para recibir notificaciones de GitHub:*
-   - En Jenkins, configura un nuevo pipeline o proyecto y agrega las credenciales de GitHub.
-     - Asegúrate de agregar la URL del repositorio de GitHub.
-     - (https://postimg.cc/CBbbb02h) 
-   - Activar la opción "GitHub hook trigger for GITScm polling" en Jenkins para que se accione como un gatillo que activa la construcción automática del proyecto cuando se produce un cambio en el repositorio de GitHub
-     -(https://postimg.cc/rKxHD9DL)
+5. *Configuración del pipeline en Jenkins*
+   - Primero instale el plugin de *Nodejs* y configurelo en las tools globales de Jenkins.
+   - (https://postimg.cc/TpHMXGts)
+   - Cree el pipeline y asegurese de dejar seleccionada la opciòn *GitHub hook trigger for GITScm polling*, esta opcion permite que Jenkins este atento al estado del repositorio que contiene el projecto, una vez detecte uun cambio ejecuta el pipeline. Permitiendo de esta manera la integraciòn continua.
+   - (https://postimg.cc/jCcYZyPt)
+   - Configure el repositorio que contiene el proyecto.
+   - (https://postimg.cc/BXv9ytBD)
 
-6. *¡Preparado para recibir commits!*
-   - En este punto, Jenkins responderá automáticamente a los commits en tu repositorio.
-   - (https://postimg.cc/47X9JWkx) 
 
 ### Verificación del Funcionamiento:
 
-- Para verificar su funcionamiento y completar la documentación de este README, se realizaron múltiples cambios en la rama principal, que fueron recibidos exitosamente por el proceso de Entrega Continua (CD).
-  - Proceso finalizado de buil: (https://postimg.cc/239N735H) 
-  - Logs que muestra que se lanzao la tarea (https://postimg.cc/rRL31YsL) 
+- Al realizar cambios en el proyecto y estos sincronizarlos en el repositorio, genera que el pipeline se ejecuta en automatico.
+- Evidencia de build: (https://postimg.cc/YvZHQkgF) 
+  
 
 ## Diagrama de Alto Nivel de la preparación del CI/CD
 ---
