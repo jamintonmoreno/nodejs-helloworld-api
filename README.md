@@ -52,8 +52,8 @@ curl http://localhost:3000
    - Esto lo llevara a la pagina de inicio de Jenkins. Ingrese su usuario y contraseña.
    - (https://postimg.cc/BX7MMBpW)
      
-4. *Configuración del webhook en GitHub:*
-   - En la configuración de tu repositorio en GitHub, agrega una nueva URL de webhook apuntando al enlace de ngrok para los eventos "push" y "pull request".
+4. *Configuración del webhook en el repositorio de GitHub:*
+   - Ingrese al repositorio. Luego ingrese a *Settings > Webhooks > Cre* En la configuración de tu repositorio en GitHub, agrega una nueva URL de webhook apuntando al enlace de ngrok para los eventos "push" y "pull request".
    - Configurar webhook en GitHub (https://postimg.cc/WdNs30F4) 
    - Seleccionar eventos en GitHub (https://postimg.cc/V5d8sN3P) 
 
